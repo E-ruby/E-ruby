@@ -65,3 +65,19 @@ def dtob(arr)
     end
 end
 print dtob(100)
+
+print [999,0,5,4,98,655].sort!
+
+def g(x)
+    x.delete(' ')
+end
+print g(' 0 00 0 0 00 0')
+
+def nifni(n)
+    n.downcase!
+    spword = n.split("")
+    counts = Hash.new(0)
+    spword.each { |element| counts[element] += 1}
+    spword.collect! {|x| counts[x] > 1 ? ")" : "("}.join
+end
+print nifni('din')
