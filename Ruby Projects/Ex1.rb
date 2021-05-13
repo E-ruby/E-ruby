@@ -52,3 +52,27 @@ puts car1.spraypaint("Blue")
 puts car1.gas_mileage(500, 20)
 car2 = Car.new("Toyota", "Camrey", 2005, "White")
 puts car2.details
+
+
+
+
+
+class Binary
+    def initialize(number)
+        @number = number
+    end
+    def dtob
+        sprintf("%b", @number)
+    end
+    def btod
+        sprintf("%d", @number)
+    end
+    def to_s
+        x = sprintf("%b", @number)
+        "The binary representation of #@number is #{x}"
+    end
+end
+B = Binary.new(9)
+puts B.dtob()
+puts B.btod()
+puts "#{B}"
